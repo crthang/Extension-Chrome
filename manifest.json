@@ -1,0 +1,33 @@
+{
+
+	"manifest_version": 2,
+	"name": "FaceBook Like",
+	"version": "1.0",
+
+	"description": "Công cụ like dạo",
+	"icons": {
+          "16": "icon.png",
+          "48": "icon.png",
+          "128": "icon.png"
+	},
+
+	"author": "Cr-Thắng",
+
+	"browser_action": {
+          "default_icon": {             // optional
+            "16": "icon.png",           // optional
+            "24": "icon.png",           // optional
+            "32": "icon.png"            // optional
+          },
+          "default_title": "FaceBook Like",      // optional; shown in tooltip
+          "default_popup": "popup/popup.html"    // optional
+        },
+
+   "content_scripts": [
+    {
+      "matches": ["*://*.facebook.com/*"],
+      "js": ["popup/js/jquery.js", "popup/js/content.js"]
+    }
+  ]     
+
+}
